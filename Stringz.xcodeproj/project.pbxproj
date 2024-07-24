@@ -595,7 +595,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tuist/xcodeproj.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 9.0.0;
 				minimumVersion = 8.8.0;
 			};
 		};
@@ -603,7 +604,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Preferences";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 3.0.0;
 				minimumVersion = 2.6.0;
 			};
 		};
@@ -611,7 +613,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/phimage/ValueTransformerKit";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 2.0.0;
 				minimumVersion = 1.2.3;
 			};
 		};
@@ -619,7 +622,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mohakapt/FileWatcher";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 1.0.0;
 				minimumVersion = 0.2.2;
 			};
 		};
@@ -627,7 +631,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 6.0.0;
 				minimumVersion = 5.0.0;
 			};
 		};
@@ -635,7 +640,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 3.0.0;
 				minimumVersion = 2.3.0;
 			};
 		};
@@ -643,7 +649,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = versionRange;
+				maximumVersion = 3.0.0;
 				minimumVersion = 2.4.3;
 			};
 		};

@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/microsoft/appcenter-sdk-apple.git",
       "state" : {
-        "revision" : "88e65475ffd3a7cf2bbde07df9e62159a1fd60a8",
-        "version" : "5.0.0"
+        "revision" : "ab54f758243f282d290b33027e8aac910d3d859a",
+        "version" : "5.0.5"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/microsoft/PLCrashReporter.git",
       "state" : {
-        "revision" : "b1a342da19ed9b3af61ea2efa7656c2af30aeb7c",
-        "version" : "1.11.0"
+        "revision" : "6752f71de206f6a53fa6a758c3660fd9a7fe7527",
+        "version" : "1.11.2"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sparkle-project/Sparkle",
       "state" : {
-        "revision" : "2a98381dfe72e24bf593c5c06d2c4fc1763c3f19",
-        "version" : "2.3.0"
+        "revision" : "0ef1ee0220239b3776f433314515fd849025673f",
+        "version" : "2.6.4"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/phimage/ValueTransformerKit",
       "state" : {
-        "revision" : "9e91f1bcfbbfc12a145d8690e1701b42471bd6c1",
-        "version" : "1.2.3"
+        "revision" : "8f40b14dd2d243898970141bb7d3d97d0026951d",
+        "version" : "1.2.4"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tuist/xcodeproj.git",
       "state" : {
-        "revision" : "b6de1bfe021b861c94e7c83821b595083f74b997",
-        "version" : "8.8.0"
+        "revision" : "7713589d4d1bceedd02899d9c44b8e57be05ea35",
+        "version" : "8.22.0"
       }
     }
   ],
