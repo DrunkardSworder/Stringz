@@ -134,9 +134,11 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
     saveAll()
   }
 
-  //MARK: - Export
+  //MARK: - Export导出CSV文件
   @objc func performRevertToSaved(_ sender: Any) {
 
+    
+      
       do {
           let csvPath = try Path.uniqueTemporary() + Path("Localize.csv")
           let stream = OutputStream(toFileAtPath: csvPath.string, append: false)!
@@ -151,7 +153,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
           // 表头
           var rowHeader = [String]()
           rowHeader.append("key")
-          rowHeader.append(contentsOf: selectLocalizable.languages.map({ $0.fiendlyName }))
+          rowHeader.append(contentsOf: selectLocalizable.valueSets.availableLanguages.map({ $0.rawValue }))
           
           debugPrint("表头: \(rowHeader)")
           
@@ -160,6 +162,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
               var rows = [String]()
               // 每一行的数据
               let rowData = selectLocalizable.valueSets[index]
+              
               for headerIndex in 0..<rowHeader.count {
                   if headerIndex == 0 {
                       rows.append(rowData.key)
@@ -178,7 +181,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
           
           // 尝试用默认应用打开文件
           let _ = Common.alert(message: "导出成功", positiveButton: "打开文件") { _ in
-              NSWorkspace.shared.open(csvPath.url)
+              NSWorkspace.shared.open(csvPath.parent().url)
           }
           
       } catch {

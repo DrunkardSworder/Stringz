@@ -90,7 +90,7 @@
                                                 <action selector="performSave:" target="Ady-hI-5gd" id="LHQ-6w-lMl"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Export" identifier="stringz.exportExcel" id="h1t-w8-xvK">
+                                        <menuItem title="ExportCSV" identifier="stringz.exportExcel" id="h1t-w8-xvK">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="performRevertToSaved:" target="Ady-hI-5gd" id="92O-et-xVt"/>
@@ -365,7 +365,7 @@ CA
                 <customObject id="fdh-X4-hQZ" customClass="SPUStandardUpdaterController"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="69"/>
+            <point key="canvasLocation" x="-49" y="61"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="wv9-Tt-moO">
@@ -576,7 +576,7 @@ CA
                     </items>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="60" y="298"/>
+            <point key="canvasLocation" x="85" y="378"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6kC-sd-Z3G">
