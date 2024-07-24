@@ -8,6 +8,8 @@
 import Cocoa
 
 extension NSUserInterfaceItemIdentifier {
+  static let export = Self("stringz.exportExcel")
+    
   static let addLanguage = Self("stringz.addLanguage")
   static let addString = Self("stringz.addString")
   static let removeString = Self("stringz.removeString")

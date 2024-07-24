@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,6 +59,7 @@
 		71FB6F9B258D0A3E00800E63 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 71FB6F9A258D0A3E00800E63 /* AppCenterCrashes */; };
 		71FB6F9D258D0A3E00800E63 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 71FB6F9C258D0A3E00800E63 /* AppCenterAnalytics */; };
 		71FFCF5D2613AB8500D7414D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 71FFCF5C2613AB8500D7414D /* Sparkle */; };
+		7E93334E2C4FBFE3005F28BD /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 7E93334D2C4FBFE3005F28BD /* CSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E93334E2C4FBFE3005F28BD /* CSV in Frameworks */,
 				71FFCF5D2613AB8500D7414D /* Sparkle in Frameworks */,
 				71EBAB772584E06700900A73 /* FileWatcher in Frameworks */,
 				71B65F91258FE5B300B2A6D2 /* Preferences in Frameworks */,
@@ -280,6 +282,7 @@
 				71B65F90258FE5B300B2A6D2 /* Preferences */,
 				71E0DB4B25A1018B0097F5B5 /* ValueTransformerKit */,
 				71FFCF5C2613AB8500D7414D /* Sparkle */,
+				7E93334D2C4FBFE3005F28BD /* CSV */,
 			);
 			productName = Stringz;
 			productReference = 7183A54E1EE81960007E88FF /* Stringz.app */;
@@ -291,12 +294,12 @@
 		7183A5461EE81960007E88FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					7183A54D1EE81960007E88FF = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PHGV4R6G9J;
 						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
@@ -318,6 +321,7 @@
 				71B65F8F258FE5B300B2A6D2 /* XCRemoteSwiftPackageReference "Preferences" */,
 				71E0DB4A25A1018B0097F5B5 /* XCRemoteSwiftPackageReference "ValueTransformerKit" */,
 				71FFCF5B2613AB8500D7414D /* XCRemoteSwiftPackageReference "Sparkle" */,
+				7E93334C2C4FBFE3005F28BD /* XCRemoteSwiftPackageReference "CSV.swift" */,
 			);
 			productRefGroup = 7183A54F1EE81960007E88FF /* Products */;
 			projectDirPath = "";
@@ -398,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -427,9 +432,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -457,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -486,9 +494,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -514,13 +524,15 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 44;
-				DEVELOPMENT_TEAM = PHGV4R6G9J;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7B6K9HG8TT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Stringz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.7.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.stringz.stringz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,13 +550,15 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 44;
-				DEVELOPMENT_TEAM = PHGV4R6G9J;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7B6K9HG8TT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Stringz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.7.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.stringz.stringz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,6 +639,14 @@
 				minimumVersion = 2.3.0;
 			};
 		};
+		7E93334C2C4FBFE3005F28BD /* XCRemoteSwiftPackageReference "CSV.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -662,6 +684,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 71FFCF5B2613AB8500D7414D /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
+		};
+		7E93334D2C4FBFE3005F28BD /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E93334C2C4FBFE3005F28BD /* XCRemoteSwiftPackageReference "CSV.swift" */;
+			productName = CSV;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

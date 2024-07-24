@@ -1,4 +1,5 @@
 {
+  "originHash" : "693fe67422b63f29aa267aeb36dd963f9a25ab7430dc459a49030054f926fe03",
   "pins" : [
     {
       "identity" : "aexml",
@@ -16,6 +17,15 @@
       "state" : {
         "revision" : "88e65475ffd3a7cf2bbde07df9e62159a1fd60a8",
         "version" : "5.0.0"
+      }
+    },
+    {
+      "identity" : "csv.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yaslab/CSV.swift.git",
+      "state" : {
+        "revision" : "81d2874c51db364d7e1d71b0d99018a294c87ac1",
+        "version" : "2.4.3"
       }
     },
     {
@@ -91,5 +101,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

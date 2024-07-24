@@ -12,6 +12,8 @@ import XcodeProj
 import PathKit
 import FileWatcher
 import Combine
+//import FileKit
+import CSV
 
 class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerDelegate {
   var appDelegate: AppDelegate {
@@ -132,8 +134,57 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
     saveAll()
   }
 
+  //MARK: - Export
   @objc func performRevertToSaved(_ sender: Any) {
 
+      do {
+          let csvPath = try Path.uniqueTemporary() + Path("Localize.csv")
+          let stream = OutputStream(toFileAtPath: csvPath.string, append: false)!
+          debugPrint("本地路径: \(csvPath)")
+          
+          let csv = try CSVWriter(stream: stream)
+          let selectLocalizable = localizables[selectedLocalizableIndex]
+          
+          let count = localizables[selectedLocalizableIndex].totalCount
+          debugPrint("国际化文字个数：\(count)")
+          
+          // 表头
+          var rowHeader = [String]()
+          rowHeader.append("key")
+          rowHeader.append(contentsOf: selectLocalizable.languages.map({ $0.fiendlyName }))
+          
+          debugPrint("表头: \(rowHeader)")
+          
+          try csv.write(row: rowHeader)
+          for index in 0..<count {
+              var rows = [String]()
+              // 每一行的数据
+              let rowData = selectLocalizable.valueSets[index]
+              for headerIndex in 0..<rowHeader.count {
+                  if headerIndex == 0 {
+                      rows.append(rowData.key)
+                  }
+                  else {
+                      // 因为有左边的key，所以往右挪一个数
+                      rows.append(rowData.values[headerIndex-1].value)
+                  }
+              }
+              // 一行一行的写入数据
+              try csv.write(row: rows, quotedAtIndex: { _ in
+                  return true
+              })
+          }
+          csv.stream.close()
+          
+          // 尝试用默认应用打开文件
+          let _ = Common.alert(message: "导出成功", positiveButton: "打开文件") { _ in
+              NSWorkspace.shared.open(csvPath.url)
+          }
+          
+      } catch {
+          let _ = Common.alert(message: error.localizedDescription)
+          debugPrint(error.localizedDescription)
+      }
   }
 
   @objc func performFilter(_ sender: Any) {
@@ -919,6 +970,9 @@ extension MainWindowController: NSMenuItemValidation, NSToolbarItemValidation {
 
     case .findNext, .findPrevious:
       return ready && !editorManager.searchQuery.isEmpty
+        
+    case .export:
+        return ready && selectedLocalizable?.localizableType == .strings
 
     default: return false
     }

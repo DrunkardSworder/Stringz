@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -54,7 +54,7 @@
                     </columns>
                     <gridCells>
                         <gridCell row="30U-Hh-laS" column="POe-Qw-Wtd" id="sXh-3A-clB">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="S5V-rK-iDG">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="S5V-rK-iDG">
                                 <rect key="frame" x="6" y="346" width="90" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Strings Order:" id="3l9-9h-K5T">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -66,9 +66,6 @@
                         <gridCell row="30U-Hh-laS" column="wXt-0p-FiT" id="RZ5-QC-eD2">
                             <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jas-lM-aLp">
                                 <rect key="frame" x="101" y="340" width="207" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="fjH-7p-NeK"/>
-                                </constraints>
                                 <popUpButtonCell key="cell" type="push" title="Keep Same" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xIq-V3-tv7" id="ijv-V8-770">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -81,6 +78,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fjH-7p-NeK"/>
+                                </constraints>
                                 <connections>
                                     <binding destination="Ero-U6-fgi" name="selectedIndex" keyPath="values.stringz.exporting.stringsOrder" id="MXt-Fy-6po"/>
                                     <binding destination="Ero-U6-fgi" name="enabled" keyPath="values.stringz.hasOpenProjects" id="NfZ-hl-HPU">
@@ -93,7 +93,7 @@
                         </gridCell>
                         <gridCell row="MHz-bE-rCY" column="POe-Qw-Wtd" id="0S5-0f-oUN"/>
                         <gridCell row="MHz-bE-rCY" column="wXt-0p-FiT" id="ozA-Jp-zTY">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-ws-IZJ">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-ws-IZJ">
                                 <rect key="frame" x="102" y="252" width="440" height="84"/>
                                 <textFieldCell key="cell" id="nX3-Ab-zyT">
                                     <font key="font" metaFont="message" size="11"/>
@@ -108,7 +108,7 @@
                             </textField>
                         </gridCell>
                         <gridCell row="YaY-mA-2m7" column="POe-Qw-Wtd" id="Nwz-qA-a6f">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-hx-Mnw">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-hx-Mnw">
                                 <rect key="frame" x="-2" y="216" width="98" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Comment Style:" id="zNF-wF-05u">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -120,9 +120,6 @@
                         <gridCell row="YaY-mA-2m7" column="wXt-0p-FiT" id="1OS-5V-5n6">
                             <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4OI-I7-d6e">
                                 <rect key="frame" x="101" y="210" width="207" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Gy0-7a-qNg"/>
-                                </constraints>
                                 <popUpButtonCell key="cell" type="push" title="Line" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="h6K-tN-AeN" id="RnI-Di-sh1">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -133,6 +130,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Gy0-7a-qNg"/>
+                                </constraints>
                                 <connections>
                                     <binding destination="Ero-U6-fgi" name="selectedIndex" keyPath="values.stringz.exporting.commentStyle" id="o0l-hB-2Fy"/>
                                     <binding destination="Ero-U6-fgi" name="enabled" keyPath="values.stringz.hasOpenProjects" id="ijS-Ow-m4Q">
@@ -145,7 +145,7 @@
                         </gridCell>
                         <gridCell row="r2Q-ak-tcq" column="POe-Qw-Wtd" id="znR-eT-6cT"/>
                         <gridCell row="r2Q-ak-tcq" column="wXt-0p-FiT" id="lcf-Dh-3C7">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2DA-UU-f9h">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2DA-UU-f9h">
                                 <rect key="frame" x="102" y="164" width="309" height="42"/>
                                 <textFieldCell key="cell" id="DKv-m2-HGg">
                                     <font key="font" metaFont="message" size="11"/>
@@ -158,7 +158,7 @@
                             </textField>
                         </gridCell>
                         <gridCell row="Lfu-5a-H9Y" column="POe-Qw-Wtd" id="9ry-N4-oGD">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="9tv-x2-6WC">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="9tv-x2-6WC">
                                 <rect key="frame" x="14" y="128" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Empty Lines:" id="Usc-4R-lYF">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -170,9 +170,6 @@
                         <gridCell row="Lfu-5a-H9Y" column="wXt-0p-FiT" id="lN0-Iz-rW7">
                             <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-WW-y4q">
                                 <rect key="frame" x="101" y="122" width="207" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Jvm-CK-cEd"/>
-                                </constraints>
                                 <popUpButtonCell key="cell" type="push" title="Always" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Ums-xw-qfO" id="EVb-AO-fPa">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -184,6 +181,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Jvm-CK-cEd"/>
+                                </constraints>
                                 <connections>
                                     <binding destination="Ero-U6-fgi" name="selectedIndex" keyPath="values.stringz.exporting.emptyLines" id="FAm-Xs-x6R"/>
                                     <binding destination="Ero-U6-fgi" name="enabled" keyPath="values.stringz.hasOpenProjects" id="EcH-78-Mn7">
@@ -196,7 +196,7 @@
                         </gridCell>
                         <gridCell row="r5T-9R-8Nb" column="POe-Qw-Wtd" id="gnC-fL-JQd"/>
                         <gridCell row="r5T-9R-8Nb" column="wXt-0p-FiT" id="H6i-s6-ITh">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-RK-pB2">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-RK-pB2">
                                 <rect key="frame" x="102" y="62" width="399" height="56"/>
                                 <textFieldCell key="cell" id="4XY-78-N9H">
                                     <font key="font" metaFont="message" size="11"/>
@@ -227,7 +227,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="lock" id="XmR-gd-ptR"/>
                                     </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="klE-q4-9he">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="klE-q4-9he">
                                         <rect key="frame" x="34" y="6" width="378" height="15"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="These options cannot be changed while you have an open project." id="ccZ-FV-ySM">
                                             <font key="font" metaFont="cellTitle"/>
