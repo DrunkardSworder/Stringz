@@ -137,8 +137,6 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
   //MARK: - Export导出CSV文件
   @objc func performRevertToSaved(_ sender: Any) {
 
-    
-      
       do {
           let csvPath = try Path.uniqueTemporary() + Path("Localize.csv")
           let stream = OutputStream(toFileAtPath: csvPath.string, append: false)!
@@ -156,26 +154,23 @@ class MainWindowController: NSWindowController, NSWindowDelegate, EditorManagerD
           rowHeader.append(contentsOf: selectLocalizable.valueSets.availableLanguages.map({ $0.rawValue }))
           
           debugPrint("表头: \(rowHeader)")
-          
+          // 将表头写入
           try csv.write(row: rowHeader)
-          for index in 0..<count {
-              var rows = [String]()
-              // 每一行的数据
-              let rowData = selectLocalizable.valueSets[index]
-              
-              for headerIndex in 0..<rowHeader.count {
-                  if headerIndex == 0 {
-                      rows.append(rowData.key)
-                  }
-                  else {
-                      // 因为有左边的key，所以往右挪一个数
-                      rows.append(rowData.values[headerIndex-1].value)
-                  }
+          
+          // 循环一共的数据
+          for x in 0..<count {
+              // 初始化每行的空白内容
+              var rows = Array(repeating: "", count: rowHeader.count)
+              for (y, language) in selectLocalizable.valueSets.availableLanguages.enumerated() {
+                  //每行的数据
+                  let rowData = selectLocalizable.valueSets[x]
+                  // 填充每一行的首列内容key
+                  rows[0] = rowData.key
+                  // 根据语言依次填充后续的内容，找不到相关内容的填充""
+                  rows[y+1] = rowData.values.value(for: language)?.value ?? ""
               }
-              // 一行一行的写入数据
-              try csv.write(row: rows, quotedAtIndex: { _ in
-                  return true
-              })
+              // 每次写入一行
+              try csv.write(row: rows)
           }
           csv.stream.close()
           
